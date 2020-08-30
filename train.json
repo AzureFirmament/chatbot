@@ -1,0 +1,495 @@
+{
+  "rasa_nlu_data": {
+    "regex_features": [
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      },
+      {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "chinese",
+        "synonyms": ["Chinese", "Chines", "chines"]
+      },
+      {
+        "value": "vegetarian",
+        "synonyms": ["veggie", "vegg"]
+      },
+      {
+        "value": "hi",
+        "synonyms": ["expensive", "valued"]
+      },
+      {
+        "value": "lo",
+        "synonyms": ["cheap"]
+      },
+      {
+        "value": "football",
+        "synonyms": ["football", "soccer"]
+      },
+      {
+        "value": "player",
+        "synonyms": ["goalkeeper", "defenser","midfielder", "striker", "winger", "wingback", "attacker", "centralback", "st","cd","rm","lm","gk"]
+      },
+      {
+        "value": "team",
+        "synonyms":["football club", "team"]
+      },
+      {
+        "value": "match",
+        "synonyms": ["competition"]
+      },
+      {
+        "value":"statistics",
+        "synonyms":["pass", "passes", "tackles", "shots", "cards", "dribbles", "dribbles", "score","shot","accruacy", "duel", "duels", "details", "detail"]
+      }
+
+    ],
+    "common_examples": [
+      {
+        "text": "hey", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "howdy", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hey there",
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hello", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hi", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "dear sir",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello, my friend!",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "yes", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yep", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yeah", 
+        "intent": "affirm", 
+        "entities": []
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "right, thank you",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "correct",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great choice",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sounds really good",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "I am looking for a football match to watch",
+        "intent": "search_fixture",
+        "entities": []
+      },
+      {
+        "text": "is there any football competition?",
+        "intent": "search_fixture",
+        "entities": []
+      },
+      {
+        "text": "I'd like some match video in 2017",
+        "intent": "search_fixture",
+        "entities": [
+          {
+            "start": 29,
+            "end": 32,
+            "value": "2017",
+            "entity": "season"
+          }]
+      },
+      {
+        "text": "help me find some premier league football match",
+        "intent": "search_fixture",
+        "entities": [
+          {
+            "start": 18,
+            "end":  32,
+            "value": "premier league",
+            "entity": "league"
+          }
+        ]
+      },
+      {
+        "text": "I want to watch UEFA Champions League!",
+        "intent": "search_fixture",
+        "entities":[
+          {
+            "start": 16,
+            "end": 36,
+            "value": "UEFA Champions League",
+            "entity": "league"
+
+          }]
+      },
+      {
+        "text": "do you know the coach Tuchel?",
+        "intent": "search_coach",
+        "entities":[
+          {
+            "start": 22,
+            "end": 27,
+            "value": "Tuchel",
+            "entity": "coach"
+          }]
+      },
+      {
+        "text": "who is the coach Coman?",
+        "intent": "search_coach",
+        "entities": [
+          {
+            "start": 17,
+            "end": 21,
+            "value": "Coman",
+            "entity": "coach"
+          }]
+
+      },
+      {
+        "text": "tell me more about the striker Messi",
+        "intent": "search_player",
+        "entities":[
+          {
+            "start": 31,
+            "end": 35,
+            "value": "Messi",
+            "entity": "player"
+          }]
+      },
+      {
+        "text": "More information about the defenser Lahm",
+        "intent": "search_player",
+        "entities":[
+          {
+            "start": 36,
+            "end": 39,
+            "value": "Lahm",
+            "entity": "player"
+          }]
+      },
+      {
+        "text": "I want to know more about the goalkeeper Kahn",
+        "intent": "search_player",
+        "entities":[
+          {
+            "start": 41,
+            "end": 44,
+            "value": "Kahn",
+            "entity": "player" 
+          }]
+      },
+      {
+        "text": "is there a team called Manchester United?",
+        "intent": "search_team",
+        "entities":[
+          {
+            "start": 23,
+            "end": 39,
+            "value": "Manchester United",
+            "entity": "team"
+          }]
+      },
+      {
+        "text": "tell me more about the team named Bayren",
+        "intent": "search_team",
+        "entities":[
+          {
+            "start": 34,
+            "end": 39,
+            "value": "Bayren",
+            "entity": "team"
+          }]
+
+      },
+      {
+        "text": "help me find the team called Dortmond",
+        "intent": "search_team",
+        "entities":[
+          {
+            "start": 29,
+            "end": 36,
+            "value": "Dortmond",
+            "entity": "team"
+          }]
+      },
+      {
+        "text": "tell me more about leagues in Germany in 2019",
+        "intent": "search_league",
+        "entities": [
+          {
+            "start": 30,
+            "end": 37,
+            "value": "Germany",
+            "entity": "country"
+
+          },
+          {
+            "start":41,
+            "end": 44,
+            "value": "2019",
+            "entity": "season"
+          }
+        ]
+      },
+      {
+        "text": "more information about England league",
+        "intent": "search_league",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "England",
+            "entity": "country"
+          }]
+
+      },
+      {
+        "text": "is there any league in Italy?",
+        "intent": "search_league",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "Italy",
+            "entity": "country"
+          }]
+      },
+      {
+        "text": "I want to know some leagues in Germany in 2019",
+        "intent": "search_league",
+        "entities":[
+          {
+            "start": 31,
+            "end": 38,
+            "value":"Germany",
+            "entity": "country"
+          },
+          {
+            "start": 42,
+            "end": 45,
+            "value":"2019",
+            "entity": "season"
+          }]
+      },
+      {
+        "text": "is there any league in France?",
+        "intent": "search_league",
+        "entities": [
+          {
+            "start": 23,
+            "end": 28,
+            "value": "France",
+            "entity": "country"
+          }]
+      },
+      {
+        "text": "are there any leagues in Italy?",
+        "intent": "search_league",
+        "entities": [
+          {
+            "start": 25,
+            "end": 29,
+            "value": "Italy",
+            "entity": "country"
+          }]
+      },
+      {
+        "text": "I want to know about some details about leagues in England?",
+        "intent": "search_league",
+        "entities": [
+          {
+            "start": 51,
+            "end": 57,
+            "value": "England",
+            "entity": "country"
+          }]
+      },
+      {
+        "text": "tell me some matches in France leagues in 2019",
+        "intent": "search_fixture",
+        "entities":[
+          {
+            "start": 24,
+            "end": 31,
+            "value": "France",
+            "entity": "country"
+          },
+          {
+            "start":42,
+            "end": 45,
+            "value": "2019",
+            "entity": "season"
+          }
+        ]
+      },
+      {
+        "text": "tell me some detail about Muller.",
+        "intent":"search_statistics",
+        "entities":[
+          {
+            "start": 26,
+            "end": 31,
+            "value":"Muller",
+            "entity": "player"
+          }]
+      },
+      {
+        "text": "I want to know the statistics about Kahn.",
+        "intent": "search_statistics",
+        "entities":[
+          {
+            "start": 36,
+            "end": 39,
+            "value": "Kahn",
+            "entity": "player"
+          }]
+      },
+      {
+        "text": "do you know how many times Oliver has dribbled?",
+        "intent": "search_statistics",
+        "entities":[
+          {
+            "start": 27,
+            "end": 34,
+            "value": "Oliver",
+            "entity": "player"
+          }]
+      },
+      {
+        "text": "I would like some matches on live",
+        "intent": "search_fixture",
+        "entities":[]
+      },
+      {
+        "text": "show me some match in England on live",
+        "intent": "search_fixture",
+        "entities":[
+          {
+            "start": 22,
+            "end": 29,
+            "value": "England",
+            "entity": "country"
+          }]
+      },
+      {
+        "text": "bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "goodbye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "good bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "stop", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "end", 
+        "intent": "goodbye", 
+        "entities": []
+      },
+      {
+        "text": "farewell",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "have a good one",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "have some lunch.",
+        "intent": "None",
+        "entities":[]
+      }
+      
+    ] 
+  }
+}
